@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/> <!--external way-->
+    <style>
+        /*css code ở đây*/
+        /*name selector*/
+        /*class selector*/
+        .wrapper{
+            color: yellow;
+        }
+
+        div{
+            color: red;
+        }
+
+        div{
+            color:blue;
+        }
+
+
+        /*id selector*/
+        /*#wrapper{
+            color: blue;
+        }*/
+
+        div span{
+           color:red;
+        }
+
+       div > span{
+         color:blue;  
+       }
+
+       #demo + div{
+         color:green;
+       }
+
+       #demo ~ div{
+           color:brown!important;
+       }
+    </style><!--internal way-->
+
+</head>
+<body>
+     <!-- <div id="wrapper" class="wrapper">Hello world</div>
+     <div class="wrapper">Hi</div> -->
+
+     <div id="demo">
+         <span>
+            Hi
+         </span>
+
+         <p>
+             <span>
+                Hello
+                <span></span>
+             </span>
+         </p>
+     </div>
+
+     <div>
+         Hello world
+     </div>
+
+     <div>
+         Hi World
+     </div>
+
+     <form>
+         <input type="text"/>
+         <input type="password"/>
+     </form>
+
+     <style>
+         input[type="text"]{
+            border:1px solid red;
+         }
+     </style>
+
+     <a>abc</a>
+     <style>
+         a:hover{
+            color:red; 
+         }
+
+         a:visited{
+             color:burlywood;
+         }
+
+        
+     </style>
+
+     <div>
+
+         <p></p>
+
+
+     </div>
+
+     <style>
+         div:before{
+
+         }
+
+         div:after{
+
+         }
+     </style>
+
+     <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+     </ul>
+
+     <style>
+         ul li:first-child{
+
+         }
+
+         ul li:last-child{
+
+         }
+     </style>
+</body>
+</html>
