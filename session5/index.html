@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script  type="text/javascript">
+   var age = 24;
+   age = age + 20; //44
+
+   age +=20;//44 gán toán học 
+
+   age = age -10;
+   age-=10;
+
+   age = age/20;
+   age/=20;
+
+   console.log(10<20); //true
+   console.log(20<10); //false
+   console.log(10==10); //true
+   console.log(10!=10); //false
+   console.log(10==='10');//false
+   console.log(10=='10'); //true
+   console.log('VietNam'=='VietNam'); //true
+
+   console.log( ((10>20) && (5<20)) ); //false
+
+   console.log(!(5<20)); //false
+
+   console.log(((10>20) || (5<20))); //true
+
+   //alert("2323892739283"); //mo ra popup 18
+  
+   //adbsdvsbd
+   /*
+    abcd
+    acnsk
+   */
+
+    var chuoi1 = 'VietNam';
+    var chuoi2 = "VietNam";
+    var chuoi3 = `VietNam`;
+
+    var chuoi3 = chuoi1+chuoi2; // VietNamVietNam
+
+    var chuoi4 = "1"+2; // 12
+    var chuoi4 = parseInt("1")+2;//3
+
+    var thoiTiet = "xau";
+
+    if(thoiTiet=="dep"){
+       // alert("Đi chơi thôi");
+    }else{
+       // alert("Ở nhà");
+    }
+
+    var a = 10;
+    switch (a) {
+        case 10:
+            alert("Gia tri a la 10");
+            break;
+
+        case 20:
+            alert("Gia tri a la 20");
+            break;
+
+        case 40:
+            alert("Gia tri a la 40");
+            break;
+    
+        default:
+
+            break;
+    }
+    
+    var number = 15;
+    while(number < 10){
+      //chạy vô hạn
+      console.log(number);
+      number+=1; 
+    }//chạy ra cái gì -> ko ra kết quả gì cả
+
+    do{
+      console.log(number); //15 // 15
+      number+=1;//16
+    }while(number < 10); 
+
+    var i =0;
+    for (var i = 0; i < 10 ; i++) {
+         if(i==5){
+             continue;
+         }
+         console.log(i);
+         //121212
+         //1212121
+    }//0,1,2,3,4,6,7,8,9
+    
+    
+    var a = 60; 
+    function kiemTraSoNT(number){
+        var laSoNT = true;
+        for(var i = 2;i<60;i++){
+            if(number%i==0){
+                laSoNT = false;
+                break;
+            }
+        }
+        if(laSoNT){
+            console.log(number+"là số nt");
+            //return true;
+        }else{
+            console.log(number+" ko phai la so nt");
+            //return false;
+        }
+    }
+
+    var kiemTra=kiemTraSoNT(a);//true or false
+    if(kiemTra==true){
+        console.log(number+"là số nt");
+    }else{
+        console.log(number+" ko phai la so nt");
+    }
+
+    var b = 50;
+    kiemTraSoNT(b);
+</script>
+</html>

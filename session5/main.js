@@ -1,0 +1,1 @@
+alert("Xin chao cac ban");
