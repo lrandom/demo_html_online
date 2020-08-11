@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">Hello World</div>
+    <button id="evt">Change Text</button>
+
+    <p>ABC</p>
+    <p>DEF</p>
+    <p>GHJ</p>
+
+    <div class="test">
+        A
+    </div>
+    
+    <div class="text">B</div>
+    <script>
+        //truy cập trực tiếp 
+        var obj = document.getElementById("wrapper");
+        //alert(obj.innerText);//Hello World; 
+
+        var evt = document.getElementById('evt');
+        evt.addEventListener('click',function(){
+            obj.innerText = "Hi World";
+
+                //lấy tất cả thẻ p
+        var ps = document.getElementsByTagName('p');
+        for (let index = 0; index < ps.length; index++) {
+            ps[index].innerText = "Hi "+index;
+        }
+
+        var divs = document.getElementsByClassName('test');
+        })
+
+    
+    </script>
+</body>
+</html>
