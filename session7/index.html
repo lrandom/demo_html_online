@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //mã jquery 
+            //lấy ra nội dung html của thẻ có id là wrapper
+            //var content = $('#wrapper').html();//'<span>Hello</span>'
+            //alert(content);
+        
+            // đẩy vào nội dung html của thẻ có id là wrapper
+            //$('#wrapper').html('<span>Hi</span>');
+
+            //tự xoá chính wrapper2
+            //$('#wrapper2').remove();
+
+            //Thêm thẻ div với nội dung test sau wrapper
+            //$('#wrapper').after('<div>Test</div>');
+
+            //Xoá các phần tử con trong wrapper
+            //$('#wrapper').empty();
+
+
+            //Thêm li vào sau li cuối cùng của ul
+            //$('ul').append('<li>Good Bye</li>');
+
+            //$('img').attr('src');//test.png
+            //$('img').attr('src','text.png');
+
+            $('#wrapper').click(function(){
+                //code xử lý khi người dùng kích hoạt sự kiện
+                alert("I am wrapper");
+            })
+
+            $('.btn-hide').click(function(){
+                //$('.para').hide();
+                //$('.para').slideUp();
+                $('.para').fadeOut(3000,function(){
+                    
+                });
+            });
+
+            $('.btn-show').click(function(){
+                //$('.para').show();
+                //$('.para').slideDown();
+                $('.para').fadeIn();
+            })
+
+            $('.btn-control-block').click(function(){
+                /*$('.block').animate({
+                    'left':100+'px'
+                },1000, function(){
+                    alert("Chạy xong");
+                })*/
+
+                //Thay đổi nhiều thuộc tính
+                $('.block').css({
+                    'background':'yellow',
+                    'width':400+'px',
+                    'height':500+'px'
+                })
+
+                //Thay đổi một thuộc tính
+                $('.block').css('background','yellow');
+            })
+        });
+
+      
+    </script>
+</head>
+<body>
+
+    <div id="wrapper"><span>Hello</span></div>
+    <div id="wrapper2">Hello</div>
+    <div id="wrapper3" data="test"></div>
+    <img src="test.png"/>
+    <ul>
+        <li>Hi</li>
+        <li>Hello</li>
+    </ul>
+
+    <p class="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam facere fuga modi aspernatur. Tempora quos repellendus officia, porro placeat asperiores reprehenderit quasi eligendi fugiat, omnis magnam amet itaque, eaque est!
+    </p>
+
+    <button class="btn-show">Show ra</button>
+    <button class="btn-hide">Ẩn đi</button>
+
+
+    <div class="block"></div>
+     
+    <button class="btn-control-block">Chạy block</button>
+</body>
+<style>
+     div.block{
+        width:100px;
+        height:100px;
+        position:relative;
+        background:red
+    } 
+
+
+</style>
+</html>
