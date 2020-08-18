@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function validate(){
+           //lấy dữ liệu người dùng điền vào username
+           var username = $('input[name="username"]').val();
+           //Nếu người dùng ko điền 
+           if(username==''){
+               alert('Vui lòng điền tên đăng nhập');
+               return false;
+           }
+
+           if(username.length < 5){
+               alert("Vui lòng điền tên đăng nhập lớn hơn 5 ký tự");
+               return false;
+           }
+
+           //lấy dữ liệu người dùng điền vào password
+           var pwd = $('input[name="password"]').val();
+           //Nếu người dùng không điền
+           if(pwd==''){
+               alert('Vui lòng điền mật khẩu');
+               return false;
+           }
+           return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validate()">
+       <div>
+           <label>Username</label>
+           <input type="text" name="username" />
+       </div>
+
+       <div>
+           <label>Password</label>
+           <input type="password" name="password"/>
+       </div>  
+
+       <div>
+           <label>Confirm Password</label>
+           <input type="password" name="confirm-password"/>
+       </div>
+
+       <div>
+           <label>Fullname</label>
+           <input type="text" name="fullname"/>
+       </div>
+
+       <div>
+           <label>Address</label>
+           <input type="text" name="address"/>
+       </div>
+
+       <div>
+           <label>Hobby</label>
+           <textarea></textarea>
+       </div>
+
+       <div>
+           <label>Email</label>
+           <input type="text" name="email">
+       </div>
+
+       <div>
+           <label>Link Facebook</label>
+           <input type="text" name="link-facebook">
+       </div>
+
+       <input type="submit" value="Đăng nhập">
+    </form>
+</body>
+</html>
